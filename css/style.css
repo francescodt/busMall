@@ -2,3 +2,28 @@ img {
     width: 300px;
     height: 300px;
 }
+
+.wrapper {
+    float: left;
+    margin: 30px;
+}
+
+#first {
+    width: 30%
+}
+
+#second {
+    width: 30%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#third {
+    width: 30%
+}
+
+header {
+    text-align: center;
+    font-size: 60px;
+    
+}
