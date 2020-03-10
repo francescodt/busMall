@@ -9,7 +9,7 @@ var pictureIndex2 = 1;
 var pictureIndex3 = 2;
 var totalClicks = 0;
 var allBusMallPictures = [];
-var votingClickTimesAllowed = 5;
+var votingClickTimesAllowed = 25;
 
 
 //Add a constructor function for our items
@@ -46,6 +46,10 @@ new busSkyMallProduct('usb', '../images/usb.gif');
 new busSkyMallProduct('water-can', '../images/water-can.jpg');
 new busSkyMallProduct('wine-glass', '../images/wine-glass.jpg');
 
+
+// busSkyMallProduct[0].timesClicked = 1
+// busSkyMallProduct[1].timesClicked = 1
+// busSkyMallProduct[2].timesClicked = 1
 
 
 // function to see if image was clicked
@@ -104,24 +108,28 @@ function imageWasClicked(event) {
         imageElements[j].removeEventListener('click', imageWasClicked);
     }
 
-    var ulElement = document.getElementById('voteList');
 
-    function productData(){
-      var productVoteData = document.createElement('li');
-      productVoteData.textContent = allBusMallPictures[index].name + ' was viewed ' + allBusMallPictures[index].timesViewedOnPage + ' times, and received ' + allBusMallPictures[index].timesClicked + ' votes, which represents ' + ((allBusMallPictures[index].timesClicked/totalClicks)* 100) + '% of total votes.';
-      ulElement.appendChild(productVoteData);
+    function productData(index){
+        var asideUl = document.getElementById('voteList');
+      var pictureVoteClickData = document.createElement('li');
+      pictureVoteClickData.textContent = allBusMallPictures[index].name + ' was viewed ' + allBusMallPictures[index].timesViewedOnPage + ' times, and received ' + allBusMallPictures[index].timesClicked + ' votes, which represents ' + ((allBusMallPictures[index].timesClicked/totalClicks)* 100) + '% of total votes.';
+      asideUl.appendChild(pictureVoteClickData);
+
+
+
     }
     
 
 
 
+
 }
 
-    // // loop for event listener on image clickage
-    // var imageElements = document.getElementsByTagName('img');
+    // loop for event listener on image clickage
+    var imageElements = document.getElementsByTagName('img');
 
-    // for (var c = 0; c < imageElements.length; c++) {
-    //     console.log('this is the event listener for the click');
-    //     imageElements[c].addEventListener('click', imageWasClicked);
+    for (var c = 0; c < imageElements.length; c++) {
+        console.log('this is the event listener for the click');
+        imageElements[c].addEventListener('click', imageWasClicked);
 
-    // }
+    }
