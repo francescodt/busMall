@@ -13,7 +13,6 @@ var votingClickTimesAllowed = 25;
 
 
 //Add a constructor function for our items
-
 function busSkyMallProduct(name, imageUrl) {
     this.name = name;
     this.imageUrl = imageUrl;
@@ -26,14 +25,14 @@ function busSkyMallProduct(name, imageUrl) {
 
 function getBusProductArray(nameOfThePropertyIWant) {
     var answer = [];
-    for(var i = 0; i < allBusMallPictures.length; i++){
-      answer[i] = allBusMallPictures[i][nameOfThePropertyIWant];
+    for (var i = 0; i < allBusMallPictures.length; i++) {
+        answer[i] = allBusMallPictures[i][nameOfThePropertyIWant];
     }
     console.log(answer);
     return answer;
 }
-  
-  busSkyMallProduct.prototype.toPercentage = function(){
+
+busSkyMallProduct.prototype.toPercentage = function () {
 
 };
 
@@ -145,36 +144,58 @@ function runMyChartsNow() {
     var ctx = document.getElementById('resultsChart').getContext('2d');
     // eslint-disable-next-line no-undef
     new Chart(ctx, {
-        type: 'bar',
+        type: 'doughnut',
         data: {
-            // what does labels do?
             labels: getBusProductArray('name'),
-            // what does datasets do?
-            // it's an array of objects
             datasets: [{
-                // what does this label do?
-                // key, legend
                 label: '# of Votes',
-                // what does this data do?
-                // actually the values in the chart
                 data: getBusProductArray('timesClicked'),
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    '#d48ae4',
+                    '#fb8a72',
+                    '#4e32b7',
+                    '#3d584b',
+                    '#cf323a',
+                    '#33600f',
+                    '#3e023f',
+                    '#01a5e6',
+                    '#62c153',
+                    '#25ee1a',
+                    '#6e0711',
+                    '#8623ac',
+                    '#d7c436',
+                    '#dba169',
+                    '#f58010',
+                    '#e7c798',
+                    '#f975cf',
+                    '#c8ffbc',
+                    '#ca0206',
+                    '#024d21',
+                    '#b1c0a9',
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
+                    '#FFF8DC',
                 ],
-                borderWidth: 1
+                borderWidth: 3
             }]
         },
         options: {
