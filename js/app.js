@@ -144,7 +144,7 @@ function runMyChartsNow() {
     var ctx = document.getElementById('resultsChart').getContext('2d');
     // eslint-disable-next-line no-undef
     new Chart(ctx, {
-        type: 'doughnut',
+        type: 'bar',
         data: {
             labels: getBusProductArray('name'),
             datasets: [{
@@ -195,19 +195,25 @@ function runMyChartsNow() {
                     '#FFF8DC',
                     '#FFF8DC',
                 ],
-                borderWidth: 3
+                borderWidth: 5
             }]
         },
         options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true,
-                        stepSize: 1
-                    }
-                }]
+            legend: {
+                labels: {
+                    fontColor: "white",
+                    fontSize: 18
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            stepSize: 1,
+                        }
+                    }]
+                }
             }
-        }
+        },
     });
 }
 

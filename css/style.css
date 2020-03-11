@@ -1,15 +1,28 @@
 img {
-    width: 300px;
+    width: 250px;
     height: 300px;
+}
+
+main {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Advent Pro', sans-serif;
+
 }
 
 .wrapper {
     float: left;
     margin: 30px;
+    background: linear-gradient(90deg, #daae51 0%, #d53369 100%);
+    border: 5px solid white; 
+    border-radius: 45px;
+    box-shadow: 5px 10px #d53369;
+    padding: 5px;
 }
 
 #first {
-    width: 30%
+    width: 30%;
+    margin-left: 30px;
 }
 
 #second {
@@ -25,9 +38,36 @@ img {
 header {
     text-align: center;
     font-size: 60px;
+    border: 5px solid white; 
+    border-radius: 45px;
+    box-shadow: 5px 10px #d53369;
+    margin: 30px;
+    padding: 15px;
+    background: linear-gradient(90deg, #daae51 0%, #d53369 100%);
+    font-family: 'Righteous', cursive;
     
 }
 
 body {
 background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+
+#chartchart {
+    height: 600px;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 60px;
+
+}
+
+footer {
+    text-align: center;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 25px;
+    background: linear-gradient(90deg, #daae51 0%, #d53369 100%);
+    border: 5px solid white; 
+    border-radius: 45px 45px 0px 0px;
+    height: 60px;
+
 }
