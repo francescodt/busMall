@@ -13,7 +13,7 @@ var votingClickTimesAllowed = 25;
 
 
 //Add a constructor function for our items
-function busSkyMallProduct(name, imageUrl, timesClicked) {
+function BusSkyMallProduct(name, imageUrl, timesClicked) {
     this.name = name;
     this.imageUrl = imageUrl;
     if (timesClicked) {
@@ -26,7 +26,7 @@ function busSkyMallProduct(name, imageUrl, timesClicked) {
 
 }
 
-busSkyMallProduct.prototype.toString = function () {
+BusSkyMallProduct.prototype.toString = function () {
     return `${this.name} product is from our this.name for the specicified array index, clicked ${this.timesClicked} times.`;
 };
 
@@ -40,7 +40,7 @@ function getBusProductArray(nameOfThePropertyIWant) {
     return answer;
 }
 
-busSkyMallProduct.prototype.toPercentage = function () {
+BusSkyMallProduct.prototype.toPercentage = function () {
 
 };
 
@@ -51,33 +51,33 @@ if (savedBusMallString) {
     var arrayOfNotBusMallObjects = JSON.parse(savedBusMallString);
 
     for (var i = 0; i < arrayOfNotBusMallObjects.length; i++) {
-        new busSkyMallProduct(arrayOfNotBusMallObjects[i].name,
+        new BusSkyMallProduct(arrayOfNotBusMallObjects[i].name,
             arrayOfNotBusMallObjects[i].imageUrl,
             arrayOfNotBusMallObjects[i].timesClicked);
     }
 } else {
 
     //Create the skymall objects with the 'new' operator
-    new busSkyMallProduct('R2-D2 suitcase', 'images/bag.jpg');
-    new busSkyMallProduct('Banana Slicer', 'images/banana.jpg');
-    new busSkyMallProduct('Pee Pad', 'images/bathroom.jpg');
-    new busSkyMallProduct('Hipster Rainboots', 'images/boots.jpg');
-    new busSkyMallProduct('All-in-one breakfast machine', '.images/breakfast.jpg');
-    new busSkyMallProduct('Italian Bubblegum', 'images/bubblegum.jpg');
-    new busSkyMallProduct('Back-problem chair', 'images/chair.jpg');
-    new busSkyMallProduct('Cthulhu', 'images/cthulhu.jpg');
-    new busSkyMallProduct('Dog muzzle', 'images/dog-duck.jpg');
-    new busSkyMallProduct('Rare canned GMO free Dragon Meat', 'images/dragon.jpg');
-    new busSkyMallProduct('Spen', 'images/pen.jpg');
-    new busSkyMallProduct('Pet Sweep', 'images/pet-sweep.jpg');
-    new busSkyMallProduct('Pizza scissors', 'images/scissors.jpg');
-    new busSkyMallProduct('Shark sleeping bag', 'images/shark.jpg');
-    new busSkyMallProduct('Baby sweep', 'images/sweep.png');
-    new busSkyMallProduct('Tauntaun sleeping bag', 'images/tauntaun.jpg');
-    new busSkyMallProduct('Canned unicorn bits', 'images/unicorn.jpg');
-    new busSkyMallProduct('Tentacle usb', 'images/usb.gif');
-    new busSkyMallProduct('Can-waterer', 'images/water-can.jpg');
-    new busSkyMallProduct('Wine prison', 'images/wine-glass.jpg');
+    new BusSkyMallProduct('R2-D2 suitcase', 'images/bag.jpg');
+    new BusSkyMallProduct('Banana Slicer', 'images/banana.jpg');
+    new BusSkyMallProduct('Pee Pad', 'images/bathroom.jpg');
+    new BusSkyMallProduct('Hipster Rainboots', 'images/boots.jpg');
+    new BusSkyMallProduct('All-in-one breakfast machine', 'images/breakfast.jpg');
+    new BusSkyMallProduct('Italian Bubblegum', 'images/bubblegum.jpg');
+    new BusSkyMallProduct('Back-problem chair', 'images/chair.jpg');
+    new BusSkyMallProduct('Cthulhu', 'images/cthulhu.jpg');
+    new BusSkyMallProduct('Dog muzzle', 'images/dog-duck.jpg');
+    new BusSkyMallProduct('Rare canned GMO free Dragon Meat', 'images/dragon.jpg');
+    new BusSkyMallProduct('Spen', 'images/pen.jpg');
+    new BusSkyMallProduct('Pet Sweep', 'images/pet-sweep.jpg');
+    new BusSkyMallProduct('Pizza scissors', 'images/scissors.jpg');
+    new BusSkyMallProduct('Shark sleeping bag', 'images/shark.jpg');
+    new BusSkyMallProduct('Baby sweep', 'images/sweep.png');
+    new BusSkyMallProduct('Tauntaun sleeping bag', 'images/tauntaun.jpg');
+    new BusSkyMallProduct('Canned unicorn bits', 'images/unicorn.jpg');
+    new BusSkyMallProduct('Tentacle usb', 'images/usb.gif');
+    new BusSkyMallProduct('Can-waterer', 'images/water-can.jpg');
+    new BusSkyMallProduct('Wine prison', 'images/wine-glass.jpg');
 
 }
 
@@ -249,35 +249,30 @@ for (var c = 0; c < imageElements.length; c++) {
 }
 
 
+var nameForm = document.getElementById('nameForm');
+nameForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    console.log('name form is listening');
+
+    // grab what user typed in
+    var nameUserProvided = document.getElementById('name').value;
+
+    // save it to local storage
+    localStorage.setItem('userName', nameUserProvided);
+    // show that info on the page
+
+    // get rid of the form
+    nameForm.textContent = 'Welcome to our site ' + nameUserProvided;
 
 
+});
 
-
-// var nameForm = document.getElementById('nameForm');
-// nameForm.addEventListener('submit', function (event) {
-//     event.preventDefault();
-//     console.log('name form is listening');
-
-//     // grab what user typed in
-//     var nameUserProvided = document.getElementById('name').value;
-//     console.log(nameUserProvided);
-
-//     // save it to local storage
-//     localStorage.setItem('userName', nameUserProvided);
-//     // show that info on the page
-
-//     // get rid of the form
-//     nameForm.textContent = 'Welcome to our site ' + nameUserProvided;
-
-
-// });
-
-// // add the form back after we clear from local storage and refresh the page
-// var savedName = localStorage.getItem('userName');
+// add the form back after we clear from local storage and refresh the page
+var savedName = localStorage.getItem('userName');
 
 // if (!savedName) {
 //     nameForm.textContent = savedName;
 // } else {
-//     localStorage.clear();
+   
 // }
 
