@@ -38,26 +38,26 @@ busSkyMallProduct.prototype.toPercentage = function () {
 
 
 //Create the skymall objects with the 'new' operator
-new busSkyMallProduct('R2-D2 suitcase', '../images/bag.jpg');
-new busSkyMallProduct('Banana Slicer', '../images/banana.jpg');
-new busSkyMallProduct('Pee Pad', '../images/bathroom.jpg');
-new busSkyMallProduct('Hipster Rainboots', '../images/boots.jpg');
-new busSkyMallProduct('All-in-one breakfast machine', '../images/breakfast.jpg');
-new busSkyMallProduct('Italian Bubblegum', '../images/bubblegum.jpg');
-new busSkyMallProduct('Back-problem chair', '../images/chair.jpg');
-new busSkyMallProduct('Cthulhu', '../images/cthulhu.jpg');
-new busSkyMallProduct('Dog muzzle', '../images/dog-duck.jpg');
-new busSkyMallProduct('Rare canned GMO free Dragon Meat', '../images/dragon.jpg');
-new busSkyMallProduct('Spen', '../images/pen.jpg');
-new busSkyMallProduct('Pet Sweep', '../images/pet-sweep.jpg');
-new busSkyMallProduct('Pizza scissors', '../images/scissors.jpg');
-new busSkyMallProduct('Shark sleeping bag', '../images/shark.jpg');
-new busSkyMallProduct('Baby sweep', '../images/sweep.png');
-new busSkyMallProduct('Tauntaun sleeping bag', '../images/tauntaun.jpg');
-new busSkyMallProduct('Canned unicorn bits', '../images/unicorn.jpg');
-new busSkyMallProduct('Tentacle usb', '../images/usb.gif');
-new busSkyMallProduct('Can-waterer', '../images/water-can.jpg');
-new busSkyMallProduct('Wine prison', '../images/wine-glass.jpg');
+new busSkyMallProduct('R2-D2 suitcase', 'images/bag.jpg');
+new busSkyMallProduct('Banana Slicer', 'images/banana.jpg');
+new busSkyMallProduct('Pee Pad', 'images/bathroom.jpg');
+new busSkyMallProduct('Hipster Rainboots', 'images/boots.jpg');
+new busSkyMallProduct('All-in-one breakfast machine', '.images/breakfast.jpg');
+new busSkyMallProduct('Italian Bubblegum', 'images/bubblegum.jpg');
+new busSkyMallProduct('Back-problem chair', 'images/chair.jpg');
+new busSkyMallProduct('Cthulhu', 'images/cthulhu.jpg');
+new busSkyMallProduct('Dog muzzle', 'images/dog-duck.jpg');
+new busSkyMallProduct('Rare canned GMO free Dragon Meat', 'images/dragon.jpg');
+new busSkyMallProduct('Spen', 'images/pen.jpg');
+new busSkyMallProduct('Pet Sweep', 'images/pet-sweep.jpg');
+new busSkyMallProduct('Pizza scissors', 'images/scissors.jpg');
+new busSkyMallProduct('Shark sleeping bag', 'images/shark.jpg');
+new busSkyMallProduct('Baby sweep', 'images/sweep.png');
+new busSkyMallProduct('Tauntaun sleeping bag', 'images/tauntaun.jpg');
+new busSkyMallProduct('Canned unicorn bits', 'images/unicorn.jpg');
+new busSkyMallProduct('Tentacle usb', 'images/usb.gif');
+new busSkyMallProduct('Can-waterer', 'images/water-can.jpg');
+new busSkyMallProduct('Wine prison', 'images/wine-glass.jpg');
 
 
 // busSkyMallProduct[0].timesClicked = 1
@@ -132,10 +132,6 @@ function imageWasClicked(event) {
 
 
     }
-
-
-
-
 
 }
 
