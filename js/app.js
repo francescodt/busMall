@@ -81,10 +81,6 @@ if (savedBusMallString) {
 
 }
 
-// busSkyMallProduct[0].timesViewedOnPage = 1
-// busSkyMallProduct[1].timesViewedOnPage = 1
-// busSkyMallProduct[2].timesViewedOnPage = 1
-
 
 // function to see if image was clicked
 function imageWasClicked(event) {
@@ -145,11 +141,11 @@ function imageWasClicked(event) {
             runMyChartsNow();
         }
 
-
+        //props to stacey for previewing her code, which helped with the writing of what is below
         function productData(index) {
-            var asideUl = document.getElementById('voteList');
+            var asideUl = document.getElementById('listForVotes');
             var pictureVoteClickData = document.createElement('li');
-            pictureVoteClickData.textContent = allBusMallPictures[index].name + ' was viewed ' + allBusMallPictures[index].timesViewedOnPage + ' times, and received ' + allBusMallPictures[index].timesClicked + ' votes, which represents ' + ((allBusMallPictures[index].timesClicked / totalClicks) * 100) + '% of total votes.';
+            pictureVoteClickData.textContent = allBusMallPictures[index].name + ' was seen ' + allBusMallPictures[index].timesViewedOnPage + ' times, and received ' + allBusMallPictures[index].timesClicked + ' votes, which represents ' + ((allBusMallPictures[index].timesClicked / totalClicks) * 100) + '% of total votes.';
             asideUl.appendChild(pictureVoteClickData);
 
 
@@ -269,10 +265,4 @@ nameForm.addEventListener('submit', function (event) {
 
 // add the form back after we clear from local storage and refresh the page
 var savedName = localStorage.getItem('userName');
-
-// if (!savedName) {
-//     nameForm.textContent = savedName;
-// } else {
-   
-// }
 
